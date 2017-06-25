@@ -5,7 +5,7 @@ This web application is a demonstration of how to implement [OpenID Connect](htt
 
 ## Running the app
 
-First, open the solution in Visual Studio and set the basic auth credentials (`BasicAuthUser` and `BasicAuthPass`), provided by the login.gov, in the [`AccountController`](ASPNET%20OIDC/Controllers/AccountController.cs). Then, click the run button with "Microsoft Edge" (same as pressing `F5`) and a new browser window will open at `http://localhost:50764/`. Click "Log in »" on the home page to request to authenticate with the login.gov IdP in our integration environment.
+First, open the solution in Visual Studio and set the basic auth credentials (`BasicAuthUser` and `BasicAuthPass`), provided by the login.gov team, in the [`AccountController`](ASPNET%20OIDC/Controllers/AccountController.cs). Then, click the run button with "Microsoft Edge" (same as pressing `F5`) and a new browser window will open at `http://localhost:50764/`. Click "Log in »" on the home page to request to authenticate with the login.gov IdP in our integration environment.
 
 ## Contributing
 
