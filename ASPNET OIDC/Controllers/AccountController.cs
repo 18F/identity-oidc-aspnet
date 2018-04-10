@@ -14,11 +14,9 @@ namespace ASPNET_OIDC.Controllers
 {
     public class AccountController : Controller
     {
-        public const string ClientId = "urn:gov:gsa:aspnet:openidconnect:int";
+        public const string ClientId = "urn:gov:gsa:openidconnect.profiles:sp:sso:logingov:aspnet_example";
         public const string ClientUrl = "http://localhost:50764";
-        public const string IdpUrl = "https://idp.int.login.gov";
-        public const string BasicAuthUser = "";
-        public const string BasicAuthPass = "";
+        public const string IdpUrl = "https://idp.int.identitysandbox.gov";
         public const string AcrValues = "http://idmanagement.gov/ns/assurance/loa/1";
 
         public ActionResult Index()
@@ -76,7 +74,7 @@ namespace ASPNET_OIDC.Controllers
             var securityToken = new JwtSecurityToken(header, payload);
             var handler = new JwtSecurityTokenHandler();
             var tokenString = handler.WriteToken(securityToken);
-            
+
             // Send POST to make token request
             using (var wb = new WebClient())
             {
@@ -85,8 +83,6 @@ namespace ASPNET_OIDC.Controllers
                 data["client_assertion_type"] = HttpUtility.HtmlEncode("urn:ietf:params:oauth:client-assertion-type:jwt-bearer");
                 data["code"] = code;
                 data["grant_type"] = "authorization_code";
-
-                wb.Credentials = new NetworkCredential(BasicAuthUser, BasicAuthPass);
 
                 var response = wb.UploadValues($"{IdpUrl}/api/openid_connect/token", "POST", data);
 

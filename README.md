@@ -1,11 +1,10 @@
-
 # ASP.NET MVC OpenID Connect Client
 
-This web application is a demonstration of how to implement [OpenID Connect](http://openid.net) in ASP.NET MVC. It was built using [Visual Studio Community 2017](https://www.visualstudio.com/vs/community) with the "ASP.NET Web Application (.NET Framework) / MVC" template, following our [login.gov developer guide](https://developers.login.gov/openid-connect) using `private_key_jwt`.
+This web application is a demonstration of how to implement [OpenID Connect](http://openid.net) in ASP.NET MVC. It was built using [Visual Studio Community 2017](https://www.visualstudio.com/vs/community) with the "ASP.NET Web Application (.NET Framework) / MVC" template, following our [login.gov developer guide](https://developers.login.gov/openid-connect) using `private_key_jwt`. All of the authentication logic is in the [account controller](ASPNET%20OIDC/Controllers/AccountController.cs).
 
 ## Running the app
 
-First, open the solution in Visual Studio and set the basic auth credentials (`BasicAuthUser` and `BasicAuthPass`), provided by the login.gov team, in the [`AccountController`](ASPNET%20OIDC/Controllers/AccountController.cs). Then, click the run button with "Microsoft Edge" (same as pressing `F5`) and a new browser window will open at `http://localhost:50764/`. Click "Log in »" on the home page to request to authenticate with the login.gov IdP in our integration environment.
+Open the solution in Visual Studio, click the run button with "IIS Express (Microsoft Edge)" (same as pressing `F5`), and a new browser window will open at `http://localhost:50764/`. Click "Log in »" on the home page to authenticate with the login.gov IdP in our integration environment.
 
 ## Contributing
 
