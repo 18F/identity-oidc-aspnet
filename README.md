@@ -1,3 +1,10 @@
+This sample SP has been retired. It was used for early prototyping for integrations with login.gov and has not been maintained. It has confirmed vulnerabilities and should not be used for production itegrations.
+
+For maintained examples of integrations with login.gov please refer to:
+
+- https://github.com/18F/identity-saml-sinatra
+- https://github.com/18F/identity-oidc-sinatra
+
 # ASP.NET MVC OpenID Connect Client
 
 This web application is a demonstration of how to implement [OpenID Connect](http://openid.net) in ASP.NET MVC. It was built using [Visual Studio Community 2017](https://www.visualstudio.com/vs/community) with the "ASP.NET Web Application (.NET Framework) / MVC" template, following our [login.gov developer guide](https://developers.login.gov/openid-connect) using `private_key_jwt`. All of the authentication logic is in the [account controller](ASPNET%20OIDC/Controllers/AccountController.cs).
